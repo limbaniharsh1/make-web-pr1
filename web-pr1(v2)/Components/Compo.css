@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.w-50{
+  width: 50%;
+}
+.w-100{
+  width: 100%;
+}
+.header {
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px auto;
+  max-width: 1440px;
+}
+.header .link {
+  text-decoration: none;
+  margin: 0 21px;
+  color: rgb(44, 43, 43);
+  position: relative;
+}
+.header .link::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  background-color: black;
+  height: 2px;
+  width: 0px;
+  transition: all 0.5s;
+}
+.header .link:hover::after {
+  width: 100%;
+  left: 0;
+}
+.header .icons ul li a {
+  color: rgb(43, 42, 42);
+  margin: 0 8px;
+  font-size: 21px;
+}
+
+/* -----  home ----- */
+
+.home .box {
+  height: 70vh;
+  width: 100%;
+  background-color: rgb(201, 125, 25);
+  background-image: url("https://cdn.shopify.com/s/files/1/0044/9802/files/Tanner-Goods-Recycled-Wallets-Journeyman-Hero-01_5b973511-6dd3-42eb-a1fc-c1a5556a88a1.jpg?v=1681962093&width=1920");
+}
+.home .box .main {
+  background-color: rgba(0, 0, 0, 0.274);
+  height: 100%;
+  width: 100%;
+}
+.home .box .main .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.home .text-content h3 {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+.home .text-content h1 {
+  color: white;
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-bottom: 21px;
+}
+.home .text-content h1::first-letter {
+  font-size: 60px;
+}
+.home .text-content button {
+  background-color: #222222;
+  color: white;
+  border: none;
+  padding: 12px 34px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.home .text-content button::after {
+  position: absolute;
+  transition: ease-out 0.5s;
+  content: "";
+  bottom: -300%;
+  left: 150%;
+  height: 200px;
+  width: 0px;
+  box-shadow: 0px 0px 100px 50px rgba(255, 255, 255, 0.411);
+  transform: rotate(40deg);
+  background-color: white;
+}
+.home:hover.home button::after {
+  left: -50%;
+  bottom: 100%;
+}
+/* .home .container{
+    justify-content: start;
+} */
+.home .seller {
+  margin-top: 38px;
+}
+.home .seller h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.home .seller h2::first-letter {
+  font-size: 48px;
+}
+.home .seller-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.home .seller-box {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+}
+.seller-img-box1 {
+  height: 300px;
+  width: 100%;
+  background-image: url('https://www.tannergoods.com/cdn/shop/products/TG-Classic-Belt-Cognac-Stainless-Thumb.jpg?v=1648151092&width=540pro1.jpg') ;
+  background-size: cover;
+  transition: all 0.5s;
+}
+.seller-img-box1:hover{
+    background-image: url('https://www.tannergoods.com/cdn/shop/products/Tanner-Goods-Classic-Belt-FD-01.jpg?v=1678746497&width=540');
+}
+
+.seller-img-box2 {
+  height: 300px;
+  width: 100%;
+  background-image: url('https://www.tannergoods.com/cdn/shop/products/TG-Classic-Belt-Black-Stainless-Thumb-edit.jpg?v=1648151008&width=540') ;
+  background-size: cover;
+  transition: all 0.5s;
+}
+.seller-img-box2:hover{
+    background-image: url('https://www.tannergoods.com/cdn/shop/products/Tanner-Goods-Classic-Belt-FD-06.jpg?v=1678746549&width=540');
+}
+
+.seller-img-box3 {
+  height: 300px;
+  width: 100%;
+  background-image: url('https://www.tannergoods.com/cdn/shop/products/Tanner-Goods-Journeyman-Natural-Front.jpg?v=1678828752&width=540') ;
+  background-size: cover;
+  transition: all 0.5s;
+}
+.seller-img-box3:hover{
+    background-image: url('https://www.tannergoods.com/cdn/shop/products/Tanner-Goods-Natural-Journeyman-Lifestyle-03.jpg?v=1678828752&width=540');
+}
+
+.seller-img-box4 {
+  height: 300px;
+  width: 100%;
+  background-image: url('https://www.tannergoods.com/cdn/shop/products/Standard-Mug-Collection_015ca7ca-6c01-4f20-81a7-028195178e48.jpg?v=1667151306&width=720') ;
+  background-size: cover;
+  transition: all 0.5s;
+}
+.seller-img-box4:hover{
+    background-image: url('https://www.tannergoods.com/cdn/shop/products/Mazama-Standard-Mug-Sandstone.jpg?v=1667151306&width=720');
+}
+
+.seller-img-box5 {
+  height: 300px;
+  width: 100%;
+  background-image: url('https://www.tannergoods.com/cdn/shop/products/Standard-Belt-Cognac-Top.jpg?v=1648152491&width=540') ;
+  background-size: cover;
+  transition: all 0.5s;
+}
+
+.seller-img-box6 {
+  height: 300px;
+  width: 100%;
+  background-image: url('https://www.tannergoods.com/cdn/shop/products/TG-Natural-Bifold-Thumb-Fix.jpg?v=1663638594&width=540') ;
+  background-size: cover;
+  transition: all 0.5s;
+}
+
+.seller-img-box7 {
+  height: 300px;
+  width: 100%;
+  background-image: url('https://www.tannergoods.com/cdn/shop/products/Tanner-Goods-Journeyman-Cognac-Front.jpg?v=1678833017&width=540') ;
+  background-size: cover;
+  transition: all 0.5s;
+}
+
+.seller-img-box8 {
+  height: 300px;
+  width: 100%;
+  background-image: url('https://www.tannergoods.com/cdn/shop/products/Canyon-Crossbody-Black-Front_ba685b60-a40d-47a5-a280-1a343a30311e.jpg?v=1670992048&width=540') ;
+  background-size: cover;
+  transition: all 0.5s;
+}
+.seller-img h5{
+    color: #363535;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.seller-img h6{
+    color: #4e4d4da9;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    margin-top: 3px;
+}
+.seller-img p{
+    color: #cd875d;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.seller-button{
+    background-color: #222222;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    /* margin-top: 100px; */
+}
+.btn{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.home{
+    margin-bottom: 42px;
+}
+
+/* product */
+
+.product .main{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 10px;
+}
+.product .main .box{
+    /* background-color: #cd875d; */
+    height: 100%;
+    padding: 24px 15px;
+    transition: all 0.5s;
+}
+.product .main .box:hover{
+  transform: scale(110%);
+  /* box-shadow: 0px 0px 10px #363535; */
+}
+.product .main img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+.product-text{
+  text-decoration: none;
+  color: black;
+}
+.product .main .box h2{
+  text-decoration: none !important;
+  color: #cd875d;
+  font-size: 15px;
+  color: #363535;
+  font-weight: 500;
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
+.product .main .box h3{
+  font-size: 15px;
+  color: #363535;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.product .main .box p{
+  font-size: 12px;
+  color: #747373e0;
+  margin-bottom: 5px;
+}
+.rating{
+  color: #cd875d;
+}
+/* details */
+
+.detail-img img{
+  width: 650px;
+}
+.detail-box{
+  margin: 52px 0px;
+}
+.detail-content h2{
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+.detail-content h6{
+  font-size: 12px;
+  font-weight: 500;
+  color: #757474;
+  font-style: italic;
+  /* margin-top: 5px; */
+}
+.detail-content h5{
+  color: #363535;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+.detail-content h3{
+  font-size: 14px;
+  margin-top: 18px;
+}
+.detail-content p{
+  color: #757474;
+  font-weight: 400;
+  font-size: 12px;
+}
+/* .detail-img .img-box img{ 
+  height: 100px;
+  width: 100px;
+} */
+.detail-btn{
+  margin-top: 15px;
+}
+.detail-btn .buy-btn{
+  background-color: #cd875d;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.detail-btn .add-btn{
+  border: #cd875d 1px solid;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer !important;
+}
+.detail-box h4{
+  color: #757474;
+  font-weight: 500;
+  font-size: 14px;
+}
+.justify-content-between{
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* sign-up */
+
+.signup-box{
+  padding: 12px;
+  margin: 0 auto;
+  width: 500px;
+  background-color:#4070f4;
+  border-radius: 5px;
+  padding: 28px 21px;
+  border: 2px solid #585858;
+  box-shadow: 5px 5px 10px rgba(68, 68, 68, 0.507);
+  text-align: center;
+}
+.signup-box h2{
+  color: white;
+  font-weight: 500;
+  margin-bottom: 18px;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+.signup-box h2::after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 21px;
+  bottom: 0;
+  left: 0;
+  background-color: #aef06c;
+}
+.signup-box h2::selection{
+  display: none;
+}
+.signup-box input{
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 12px 28px;
+  border-radius: 5px;
+  width: 300px;
+  margin: 8px 0px;
+  margin: 18px auto;
+  color: white;
+  display: block;
+}
+.signup-box input::placeholder{
+  color: white;
+}
+.signup-box button{
+  display: block;
+  background-color: white;
+  border: none;
+  color: #4070f4;
+  margin: 0 auto;
+  margin-top: 28px;
+  width: 200px;
+  height: 40px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.signup-box h6{
+  color: rgb(197, 197, 197);
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 8px;
+}
+.signup-box h6 span{
+  color: #ffffff;
+}
+.white{
+  color: white;
+}
