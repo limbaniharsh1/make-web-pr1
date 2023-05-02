@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "./Header";
 import { StarFill, StarHalf } from "react-bootstrap-icons";
 
 function Details() {
   let [data, setData] = useState({});
   let { id } = useParams();
+  let nav = useNavigate()
   console.log(id);
   useEffect(() => {
     get();
@@ -16,6 +17,12 @@ function Details() {
     let res = await req.json();
     setData(res);
   };
+  let handlecart =()=> {
+    let product = JSON.parse(localStorage.getItem('cart')) || []
+    product.push(data);
+    localStorage.setItem('cart',JSON.stringify(product))
+    nav('/cart')
+  }
   return (
     <div className="details">
       <Header />
@@ -69,7 +76,7 @@ function Details() {
                   <div className="row detail-btn justify-content-between">
                     <div className="btns">
                       <button className="buy-btn">Buy now</button>
-                      <button className="add-btn">Add to cart</button>
+                      <button className="add-btn" onClick={handlecart}>Add to cart</button>
                     </div>
                     <h4>Available Stock : {data.stock}</h4>
                   </div>

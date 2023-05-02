@@ -7,6 +7,7 @@ import Collection from './Collection'
 import Sale from './Sale'
 import Singup from './Singup'
 import Login from './Login'
+import Cart from './Cart'
 
 function AllRoute() {
   return (
@@ -19,6 +20,7 @@ function AllRoute() {
         <Route path='/sale' element={<Sale/>}/>
         <Route path='/signup' element={<Singup/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
     </div>
   )

@@ -40,7 +40,7 @@ function Singup() {
             <h2>Sign up</h2>
 
             <input type="text" placeholder="enter your user name"  onChange={(e)=>setuser(e.target.value)} value={user}/>
-            <input type="email" placeholder="enter your Email" onChange={(e)=>setemail(e.target.value)}/>
+            <input type="text" placeholder="enter your Email" onChange={(e)=>setemail(e.target.value)}/>
             <input type="password" placeholder="create password" onChange={(e)=>setpass(e.target.value)}/>
             <input type="password" placeholder="confirm password" onChange={(e)=>setcpass(e.target.value)}/>
             <button onClick={()=>data()}>sign up</button>

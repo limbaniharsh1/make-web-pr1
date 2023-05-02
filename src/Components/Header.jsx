@@ -30,9 +30,7 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="#">
-              <Cart />
-            </a>
+            <Link to={'/cart'}><Cart/></Link>
           </li>
         </ul>
       </div>

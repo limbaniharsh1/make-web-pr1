@@ -6,6 +6,8 @@ import { StarFill, StarHalf } from "react-bootstrap-icons";
 function Product() {
   let [data, setdata] = useState([]);
   let my = JSON.parse(localStorage.getItem('data')) || []; 
+  // let obj;
+  // my.map((v)=>{obj=v.length})
   console.log(my)
   useEffect(() => {
     get();
