@@ -67,8 +67,8 @@ function Product() {
       let filtereddata = data.filter((v)=>v.category === 'lighting')
       setdata(filtereddata)
     }
-    else if(data == 'skincare'){
-      let filtereddata = data.filter((V)=>v.category == 'skincare')
+    else if(cate == 'skin'){
+      let filtereddata = data.filter((v)=>v.category == 'skincare')
       setdata(filtereddata)
     }
   }
