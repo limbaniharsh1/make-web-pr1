@@ -13,9 +13,9 @@ function Singup() {
   let [pass,setpass]=useState('')
   let [cpass,setcpass]=useState('')
   let fdata = []
-  console.log(user)
-  console.log(email)
-  console.log(pass)
+  // console.log(user)
+  // console.log(email)
+  // console.log(pass)
   let set = {
     user : user,
     email : email,

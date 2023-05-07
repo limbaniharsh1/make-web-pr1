@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
-import { JournalMinus, Minecart, Minus, NodeMinus, PatchMinus, Plus, Subtract } from "react-bootstrap-icons";
+import { CheckLg, JournalMinus, Minecart, Minus, NodeMinus, PatchMinus, Plus, Subtract } from "react-bootstrap-icons";
 import { useState } from "react";
 import Add from "./Add";
 
 function Cart() {
-  let[count,setcount]=useState(1)
-  let[total,settotal]=useState(0)
-  let add =()=>{
-    setcount(++count)
-  }
-  console.log(count)
+  let [count, setcount] = useState(1)
+  let [total, settotal] = useState(0)
+  useEffect(() => {
+    getprice()
+  }, [])
+  
+  // console.log(count)
   let product = JSON.parse(localStorage.getItem("cart"));
-  console.log(product);
+  // console.log(product);
+  let getprice = () => {
+    let first = 0
+    let product = JSON.parse(localStorage.getItem("cart"));
+    product.map((v, i) => {
+      first += v.price
+      // console.log(v.price)
+      settotal(first)
+    })
+  }
   return (
     <div>
       <Header />
@@ -40,8 +50,8 @@ function Cart() {
                       </div>
                       <div className="w-50">
                         <div className="w-100">
-                            <Add price={v.price} total={total} settotal={settotal}/>
-                          </div>
+                          <Add price={v.price} total={total} settotal={settotal} />
+                        </div>
                       </div>
                     </div>
                   </div>

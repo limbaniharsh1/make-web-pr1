@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
+  scroll-behavior: smooth;
 }
 .container {
   max-width: 1440px;
@@ -21,6 +22,12 @@ ul {
 }
 .w-50{
   width: 50%;
+}
+.w-75{
+  width: 75%;
+}
+.w-25{
+  width: 25%;
 }
 .w-100{
   width: 100%;
@@ -257,8 +264,25 @@ ul {
 
 .product .main{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     padding: 10px;
+}
+.product .menu .w-100{
+  border: 1px solid #5858585c;
+  border-radius: 10px;
+  position: sticky;
+  top: 12px;
+  background-color:  #8888881e;
+  padding: 21px;
+}
+.product .menu input{
+  margin-right: 5px;
+}
+.product .menu ul{
+  margin-top: 10px;
+}
+.product .menu li,.product .menu label{
+  cursor: pointer;
 }
 .product .main .box{
     /* background-color: #cd875d; */

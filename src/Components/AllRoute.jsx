@@ -8,6 +8,7 @@ import Sale from './Sale'
 import Singup from './Singup'
 import Login from './Login'
 import Cart from './Cart'
+import Kids from './Kids'
 
 function AllRoute() {
   return (
@@ -21,6 +22,7 @@ function AllRoute() {
         <Route path='/signup' element={<Singup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/kids' element={<Kids/>}/>
       </Routes>
     </div>
   )
