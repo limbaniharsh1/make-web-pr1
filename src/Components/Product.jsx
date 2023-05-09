@@ -7,6 +7,7 @@ import Kids from "./Kids";
 
 function Product() {
   let [data, setdata] = useState([]);
+  let [all, setall] = useState([]);
   let[urlname,setUrlname]=useSearchParams()
   let my = JSON.parse(localStorage.getItem('data')) || [];
   // let obj;
@@ -15,12 +16,18 @@ function Product() {
   console.log(my)
   useEffect(() => {
     get();
+    getall()
     // handlecategories()
   }, []);
   let get = async () => {
     let req = await fetch(`https://dummyjson.com/products?pages=1&limit=300`);
     let res = await req.json();
     setdata(res.products);
+  };
+  let getall = async () => {
+    let req = await fetch(`https://dummyjson.com/products?pages=1&limit=300`);
+    let res = await req.json();
+    setall(res.products);
   };
   
   let param=urlname.get('sort')
@@ -40,35 +47,35 @@ function Product() {
   },[cate])
   let handle =()=>{
     if(cate == 'electronics'){
-      let filtereddata = data.filter((v)=>v.category === 'laptops' || v.category === 'smartphones' || v.category === 'automotive');
+      let filtereddata = all.filter((v)=>v.category === 'laptops' || v.category === 'smartphones' || v.category === 'automotive');
       setdata(filtereddata)
     }
     else if(cate == 'mens'){
-      let filtereddata = data.filter((v)=>v.category === 'mens-shirts' || v.category === 'mens-shoes' || v.category === 'mens-watches' || v.category === 'sunglasses' || v.category === 'fragrences')
+      let filtereddata = all.filter((v)=>v.category === 'mens-shirts' || v.category === 'mens-shoes' || v.category === 'mens-watches' || v.category === 'sunglasses' || v.category === 'fragrences')
       setdata(filtereddata)
     }
     else if(cate == 'womens'){
-      let filtereddata = data.filter((v)=>v.category === 'womens-dresses' || v.category === 'womens-shoes' || v.category === 'womens-watches' || v.category === 'womens-bags' || v.category === 'womens.jewellery')
+      let filtereddata = all.filter((v)=>v.category === 'womens-dresses' || v.category === 'womens-shoes' || v.category === 'womens-watches' || v.category === 'womens-bags' || v.category === 'womens.jewellery')
       setdata(filtereddata)
     }
     else if(cate == 'furniture'){
-      let filtereddata = data.filter((v)=>v.category === 'furniture' || v.category === 'home-decoration')
+      let filtereddata = all.filter((v)=>v.category === 'furniture' || v.category === 'home-decoration')
       setdata(filtereddata)
     }
     else if(cate == 'automotive'){
-      let filtereddata = data.filter((v)=>v.category === 'automotive')
+      let filtereddata = all.filter((v)=>v.category === 'automotive')
       setdata(filtereddata)
     }
     else if(cate == 'motocycle'){
-      let filtereddata = data.filter((v)=>v.category === 'motorcycle')
+      let filtereddata = all.filter((v)=>v.category === 'motorcycle')
       setdata(filtereddata)
     }
     else if(cate == 'lighting'){
-      let filtereddata = data.filter((v)=>v.category === 'lighting')
+      let filtereddata = all.filter((v)=>v.category === 'lighting')
       setdata(filtereddata)
     }
     else if(cate == 'skin'){
-      let filtereddata = data.filter((v)=>v.category == 'skincare')
+      let filtereddata = all.filter((v)=>v.category == 'skincare')
       setdata(filtereddata)
     }
   }
